@@ -1,0 +1,18 @@
+<div class="login-register login">
+  <% if flash[:alert] %>
+  <p id="notice"><%= flash[:alert] %></p>
+  <% end %>
+  <%= form_tag('/login') do %>
+  <fieldset>
+    <legend>Login</legend>
+    <div class="form">
+      <%= text_field_tag :username, params[:username], :placeholder => 'username'%>
+      <%= password_field_tag :password, params[:password],:placeholder => 'password' %>
+    </div>
+    <div class="submit">
+      <button name="commit" type="submit"><span>Login</span></button>
+    </div>
+  </fieldset>
+  <% end %>
+  <%= link_to 'noch nicht Angemeldet?', new_user_path %>
+</div>
