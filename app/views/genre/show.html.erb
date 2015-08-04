@@ -1,0 +1,8 @@
+<%= render 'templates/header' %>
+<% if flash[:alert] %>
+    <p id="notice"><%= flash[:alert] %></p>
+<% end %>
+<div class="content">
+  <%= render 'templates/list' %>
+</div>
+<%= render 'templates/audioplayer' %>

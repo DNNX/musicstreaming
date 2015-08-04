@@ -1,0 +1,14 @@
+@import 'variables';
+
+.selectboxit-container {
+  width:100%;
+  margin-bottom:20px;
+  .selectboxit {
+    width:100% !important;
+    background:none;
+    border:1px solid #fff !important;
+    border-radius:0 !important;
+    color:#fff !important;
+
+  }
+}

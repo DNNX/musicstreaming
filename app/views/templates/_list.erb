@@ -1,0 +1,15 @@
+# encoding: utf-8
+
+<div class="wrapper">
+  <table>
+    <% @music.each do |music| %>
+        <tr>
+          <td class="path" data-path="<%= music.path %>"><i class="icon-play2"></i></td>
+          <td class="title"><%= music.title %></td>
+          <td class="interpret"><%= music.interpret %></td>
+          <td><i class="icon-heart"></i></td>
+        </tr>
+    <% end %>
+  </table>
+</div>
+
