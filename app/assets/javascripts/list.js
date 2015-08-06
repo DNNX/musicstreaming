@@ -8,7 +8,7 @@ App.list.prototype = {
     /**
      * inits the musiclist
      */
-    init: function() {
+    init: function () {
         $('.content').height(($(window).height() - $('#header').height()) - 101);
         $('.wrapper').mCustomScrollbar({
             axis: 'y',
@@ -20,7 +20,8 @@ App.list.prototype = {
     /**
      * binds Events from musiclist
      */
-    bindEvents: function() {
+    bindEvents: function () {
+        var me = this;
         $('.icon-heart').hover(function () {
             if ($(this).hasClass('active')) {
                 if ($(this).hasClass('icon-heart')) {
@@ -48,11 +49,11 @@ App.list.prototype = {
             var interpret = $(this).children('.interpret').text();
             var title = $(this).children('.title').text();
             var path = $(this).children('.path').attr('data-path');
-            if (this.firstInit) {
+            if (me.firstInit) {
                 $('.music-player .sm2-bar-ui').css('margin-bottom', '0');
                 $('.sm2-playlist-target .sm2-playlist-bd li b').append(interpret);
                 $('.sm2-playlist-target  .sm2-playlist-bd li').append(' - ' + title);
-                this.firstInit = false;
+                me.firstInit = false;
                 $('.sm2-playlist-wrapper .sm2-playlist-bd').append('<li class="selected"><a href="' + path + '"><b>' + interpret + '</b> - ' + title + '</a></li>');
             } else {
                 $('.sm2-playlist-wrapper .sm2-playlist-bd').append('<li><a href="' + path + '"><b>' + interpret + '</b> - ' + title + '</a></li>');
@@ -61,18 +62,23 @@ App.list.prototype = {
             soundManager.reboot();
 
         });
+        $('.sm2-playlist-bd li').click(function(){
+            soundManager.stopAll();
+            soundManager.reboot();
+
+        });
         $('.sm2-menu').click(function () {
-            if (this.isOpen) {
+            if (me.isOpen) {
                 $('.sm2-playlist-drawer').height(0);
                 $('.sm2-bar-ui').removeClass('playlist-open');
-                this.isOpen = false;
+                me.isOpen = false;
             } else {
                 $('.sm2-playlist-drawer').height($('.sm2-playlist-wrapper').height() + 16);
                 $('.sm2-bar-ui').addClass('playlist-open');
-                this.isOpen = true;
+                me.isOpen = true;
             }
         });
-        $(window).resize(function() {
+        $(window).resize(function () {
             $('.content').height(($(window).height() - $('#header').height()) - 101);
         });
     }
