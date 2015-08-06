@@ -1,14 +1,66 @@
 @import 'variables';
 
-.selectboxit-container {
-  width:100%;
-  margin-bottom:20px;
-  .selectboxit {
-    width:100% !important;
-    background:none;
-    border:1px solid #fff !important;
-    border-radius:0 !important;
-    color:#fff !important;
+.selectboxit-container * {
+  font-family: 'Roboto Condensed', sans-serif !important;
+  color: $hoverGrey;
+  font-size: 100% !important;
+}
 
+.selectboxit-container {
+  width: 100%;
+  margin-bottom: 20px;
+  .selectboxit {
+    width: 100% !important;
+    height: 45px;
+    background: none;
+    border: 1px solid #fff !important;
+    border-radius: 0 !important;
+    color: #fff !important;
+    .selectboxit-arrow-container {
+      margin-top: 9px;
+      margin-right: 10px;
+      &:before {
+        font-family: 'icomoon' !important;
+        speak: none;
+        font-style: normal;
+        font-weight: normal;
+        font-variant: normal;
+        text-transform: none;
+        line-height: 1;
+
+        /* Better Font Rendering =========== */
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+        content: "\e612";
+        display: block;
+        font-size: 27px;
+        color: $hoverGrey;
+      }
+      .selectboxit-default-arrow {
+        border: none !important;
+      }
+    }
+    .selectboxit-text {
+      margin-top: 7px;
+    }
+    &:focus, &:hover {
+      background-color: $grey !important;
+      border-color: $hoverGrey !important;
+    }
   }
+  .selectboxit-options {
+    background: $darkGrey;
+    color: #fff !important;
+    min-width: 100% !important;
+    li {
+      a {
+        color: #fff !important;
+      }
+    }
+  }
+}
+
+.selectboxit-focus, .selectboxit-hover {
+  background-color: $grey !important;
+  border-color: $hoverGrey !important;
 }
