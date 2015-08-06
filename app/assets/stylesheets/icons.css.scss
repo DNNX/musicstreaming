@@ -1,10 +1,10 @@
 @font-face {
   font-family: 'icomoon';
-  src:url('fonts/icomoon.eot?-hj6no4');
-  src:url('fonts/icomoon.eot?#iefix-hj6no4') format('embedded-opentype'),
-  url('fonts/icomoon.ttf?-hj6no4') format('truetype'),
-  url('fonts/icomoon.woff?-hj6no4') format('woff'),
-  url('fonts/icomoon.svg?-hj6no4#icomoon') format('svg');
+  src:url('fonts/icomoon.eot?-ssbzz7');
+  src:url('fonts/icomoon.eot?#iefix-ssbzz7') format('embedded-opentype'),
+  url('fonts/icomoon.ttf?-ssbzz7') format('truetype'),
+  url('fonts/icomoon.woff?-ssbzz7') format('woff'),
+  url('fonts/icomoon.svg?-ssbzz7#icomoon') format('svg');
   font-weight: normal;
   font-style: normal;
 }
@@ -23,6 +23,18 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
+.icon-down:before {
+  content: "\e612";
+}
+.icon-left:before {
+  content: "\e613";
+}
+.icon-right:before {
+  content: "\e614";
+}
+.icon-up:before {
+  content: "\e615";
+}
 .icon-arrow:before {
   content: "\e607";
 }
@@ -74,6 +86,6 @@
 .icon-heart-broken:before {
   content: "\e605";
 }
-.icon-play2:before{
+.icon-play2:before {
   content: "\e606";
 }
