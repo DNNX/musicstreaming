@@ -1,0 +1,2 @@
+var parent = $('#<%= dom_id(@favorite) %>').parent('tr')
+$("#favorites_<%= @favorite.music_id %>").html($("<%=j link_to '',favorites_destroy_path(:music_id => @favorite.music_id),{ :class =>'icon-heart active', :remote => true} %>"));
