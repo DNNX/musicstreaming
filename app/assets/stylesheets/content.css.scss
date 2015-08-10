@@ -24,6 +24,8 @@
           }
           .icon-heart {
             float:left;
+            color:#fff;
+            text-decoration:none;
             &.active {
               color:$pink;
             }
@@ -33,6 +35,8 @@
           }
           .icon-heart-broken {
             float:left;
+            color:#fff;
+            text-decoration:none;
           }
         }
       }
