@@ -1,8 +1,8 @@
 class FavoritesController < ApplicationController
   def new
-    @favorite = Favorites.where(:user_id => session[:user_id],:music_id => params[:music_id])
+    @favorite = Favorites.where(user_id: session[:user_id],music_id: params[:music_id])
     if @favorite.any? == false
-      @favorite = Favorites.new(:user_id => session[:user_id],:music_id => params[:music_id])
+      @favorite = Favorites.new(user_id: session[:user_id],music_id: params[:music_id])
       if @favorite.save
         respond_to do |format|
           format.js
@@ -11,6 +11,6 @@ class FavoritesController < ApplicationController
     end
   end
   def destroy
-    Favorites.destroy_all(:user_id => session[:user_id],:music_id => params[:music_id])
+    Favorites.destroy_all(user_id: session[:user_id],music_id: params[:music_id])
   end
 end
