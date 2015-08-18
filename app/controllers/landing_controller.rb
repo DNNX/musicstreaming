@@ -2,7 +2,7 @@
 
 class LandingController < ApplicationController
   def index
-    @favorites = Favorites.where(:user_id => session[:user_id])
+    @favorites = Favorites.where(user_id: session[:user_id])
 
     favoriteMusic = []
     @favorites.each do |favorite|
