@@ -6,7 +6,7 @@ class LandingController < ApplicationController
 
     favoriteMusic = []
     @favorites.each do |favorite|
-      favoriteMusic = favorite.music_id
+      favoriteMusic.push(favorite.music_id)
     end
     @music = Music.where(id: favoriteMusic)
   end
