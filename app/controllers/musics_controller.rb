@@ -11,7 +11,7 @@ class MusicsController < ApplicationController
         format.html { redirect_to landing_index_path, alert: 'Deine Musik wurde erfolgreich hochgeladen!' }
         format.json { render :show, status: :created, location: @music }
       else
-        format.html { redirect_to new_music_path, alert: 'Ups! Irgentwas ging schief :( überprüfe nochmal deine eingaben'}
+        format.html { redirect_to upload_path, alert: 'Ups! Irgentwas ging schief :( überprüfe nochmal deine eingaben'}
       end
     end
   end
