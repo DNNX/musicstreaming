@@ -1,4 +1,5 @@
 <div class="wrapper">
+  <%= link_to 'Alle', genre_show_path(:genre_id => 'all'), { :class=>'genre' } %>
   <% @genres.each do |genre| %>
       <%= link_to genre.title, genre_show_path(:genre_id => genre.id), { :class=>'genre' } %>
   <% end %>
