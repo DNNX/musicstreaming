@@ -4,7 +4,7 @@
   <% end %>
   <%= form_tag('/login') do %>
   <fieldset>
-    <legend>Login</legend>
+    <legend><%=t "session.title" %></legend>
     <div class="form">
       <%= text_field_tag :username, params[:username], :placeholder => 'username'%>
       <%= password_field_tag :password, params[:password],:placeholder => 'password' %>
