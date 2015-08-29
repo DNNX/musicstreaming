@@ -4,10 +4,10 @@
   <nav id="nav">
     <ul>
       <li><%= link_to '', musics_new_path, { :class=>'icon-upload' } %></li>
-      <li><%= link_to 'Browse', browse_path %></li>
-      <li><%= link_to 'Meine Musik', landing_path %></li>
-      <li><%= link_to 'Einstellungen', edit_user_path(:id => session[:user_id]) %></li>
-      <li><%= link_to content_tag(:span, 'Ausloggen'), sessions_destroy_path, { :class=>'logout' }%></li>
+      <li><%= link_to t('browse'), browse_path %></li>
+      <li><%= link_to t('myMusic'), landing_path %></li>
+      <li><%= link_to t('settings'), edit_user_path(:id => session[:user_id]) %></li>
+      <li><%= link_to content_tag(:span, t('logoutButton')), sessions_destroy_path, { :class=>'logout' }%></li>
     </ul>
   </nav>
 </header>

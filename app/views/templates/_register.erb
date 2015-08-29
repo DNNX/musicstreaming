@@ -3,8 +3,8 @@
     <div class="form">
       <%= f.text_field :username, :placeholder => :username  %>
       <%= f.text_field :email, :placeholder => :email  %>
-      <%= f.password_field :password, :placeholder => "passwort" %>
-      <%= f.password_field :password_confirmation,  :placeholder => "passwort wiederholen" %>
+      <%= f.password_field :password, :placeholder => t('templates.password') %>
+      <%= f.password_field :password_confirmation,  :placeholder => t('templates.passwordAgain') %>
     </div>
     <div class="submit">
       <button name="commit" type="submit"><span>Register</span></button>
