@@ -1,0 +1,19 @@
+# encoding: utf-8
+
+<div class="wrapper">
+  <table>
+  <% @music.each do |music| %>
+        <tr>
+          <td class="path" data-path="<%= music.path %>"><i class="icon-play2"></i></td>
+          <td class="title"><%= music.title %></td>
+          <td class="interpret"><%= music.interpret %></td>
+          <% if music.ifFavorite %>
+          <td id="favorites_<%= music.id %>" ><%= link_to '',favorites_new_path(:music_id => music.id),{ :class =>'icon-heart active', :remote => true } %></td>
+          <% else %>
+          <td id="favorites_<%= music.id %>" ><%= link_to '',favorites_new_path(:music_id => music.id),{ :class =>'icon-heart', :remote => true } %></td>
+          <% end %>
+        </tr>
+    <% end %>
+  </table>
+</div>
+
