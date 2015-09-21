@@ -1,15 +1,21 @@
 # encoding: utf-8
 
 <div class="wrapper">
-  <table>
     <% @music.each do |music| %>
-        <tr>
-          <td class="path" data-path="<%= music.path %>"><i class="icon-play2"></i></td>
-          <td class="title"><%= music.title %></td>
-          <td class="interpret"><%= music.interpret %></td>
-          <td id="favorites_<%= music.id %>" ><%= link_to '',favorites_destroy_path(:music_id => music.id),{ :class =>'icon-heart active', :remote => true } %></td>
-        </tr>
+        <div class="music">
+          <figure>
+                <%= image_tag('/assets/images/placeholder.jpg', alt: 'placeholder') %>
+          </figure>
+          <div class="music-overlay icon-play">
+            <div id="favorites_<%= music.id %>" class="favorite">
+              <%= link_to '',favorites_destroy_path(:music_id => music.id),{ :class =>'icon-heart active', :remote => true } %>
+            </div>
+          </div>
+          <div class="title">
+            <h4><%= music.interpret %></h4>
+            <h5><%= music.title %></h5>
+          </div>
+        </div>
     <% end %>
-  </table>
 </div>
 

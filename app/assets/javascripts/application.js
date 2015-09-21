@@ -11,9 +11,7 @@
 // about supported directives.
 //
 //= require jquery
-//= require jquery_ujs
-//= require jquery-ui.min.js
-//= require soundmanager2-jsmin.js
-//= require selectboxit.js
+//= require globals.js
+//= require main.js
 //= require_tree
 
