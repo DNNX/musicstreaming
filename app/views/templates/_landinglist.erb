@@ -4,7 +4,7 @@
     <% @music.each do |music| %>
         <div class="music">
           <figure>
-                <%= image_tag('/assets/images/placeholder.jpg', alt: 'placeholder') %>
+            <img src="/assets/images/placeholder.jpg" alt="placeholder"/>
           </figure>
           <div class="music-overlay icon-play">
             <div id="favorites_<%= music.id %>" class="favorite">

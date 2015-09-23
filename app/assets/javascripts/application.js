@@ -11,6 +11,9 @@
 // about supported directives.
 //
 //= require jquery
+//= require masonry.js
+//= require autosize.min.js
+
 //= require globals.js
 //= require main.js
 //= require_tree

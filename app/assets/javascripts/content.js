@@ -14,14 +14,17 @@ App.content.prototype = {
 	 * $returns {undefined}
 	 */
 	init: function () {
+        var me = this;
 		$(this.options.element).width($(window).width() - $(this.options.nav).width());
 		$(this.options.element).height($(window).height());
 		$(this.options.element).mCustomScrollbar({
 			axis: 'y',
 			theme: 'dark'
 		});
-		this.updateMusicTiles();
-		this.bindEvents();
+        window.setTimeout(function(){
+            me.updateMusicTiles();
+        },1)
+        this.bindEvents();
 	},
 	/**
 	 * binds Events
@@ -32,7 +35,7 @@ App.content.prototype = {
 		$(window).resize(function () {
 			$(me.options.element).width($(window).width() - $(me.options.nav).width());
 			$(me.options.element).height($(window).height());
-			me.updateMusicTiles();
+            me.updateMusicTiles();
 		});
 		$(this.options.music).hover(function () {
 			$(this).find(me.options.overlay).css('left', '0');
@@ -82,9 +85,14 @@ App.content.prototype = {
 			$(this.options.music).width(($(this.options.music).parent().width() / tiles));
 		}
 		$(this.options.overlay).each(function () {
-			$(this).width($(this).parent().width());
-			$(this).height($(this).parent().find('img').height());
-		});
+            if($(this).parent().hasClass('genre')){
+                $(this).width($(this).parent().parent().width());
+                $(this).height($(this).parent().parent().find('img').height());
+            }else {
+                $(this).width($(this).parent().width());
+                $(this).height($(this).parent().find('img').height());
+            }
+        });
 		$('.wrapper').masonry({
 			// set itemSelector so .grid-sizer is not used in layout
 			itemSelector: '.wrapper .music'
