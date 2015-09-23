@@ -1,10 +1,11 @@
 #encoding: utf-8
+<% content_for :body_class, 'grey' %>
 <div class="login-register register">
   <% if flash[:alert] %>
       <p id="notice"><%= flash[:alert] %></p>
   <% end %>
   <%= render 'templates/register' %>
-  <%= link_to 'Doch einen Account? Hier gehts zum Login!', sessions_new_path %>
+  <%= link_to t('users.registration'), sessions_new_path %>
 
 </div>
 

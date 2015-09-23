@@ -1,15 +1,15 @@
 <div class="wrapper">
   <div class="upload">
-    <h1>Upload Musik</h1>
+    <h1><%= t('templates.uploadMusicHeading') %></h1>
     <%= form_for @music, :html => {:multipart => true} do |f| %>
         <div class="form">
           <%= f.text_field :interpret, :placeholder => :interpret  %>
-          <%= f.text_field :title, :placeholder => :title  %>
-          <%= f.collection_select :genre_id, Genres.all, :id, :title, :prompt => "Select a genre" %>
+          <%= f.text_field :title, :placeholder => :title %>
+          <%= f.collection_select :genre_id, Genres.all, :id, :title, :prompt => t('genre') %>
           <%= f.file_field :path %>
         </div>
         <div class="submit">
-          <button name="commit" type="submit"><span>Hochladen</span></button>
+          <button name="commit" type="submit"><span> <%= t('upload') %></span></button>
         </div>
     <% end %>
   </div>

@@ -1,8 +1,8 @@
-<%= render 'templates/header' %>
+<%= render 'templates/nav' %>
 <% if flash[:alert] %>
     <p id="notice"><%= flash[:alert] %></p>
 <% end %>
-<div class="content">
-  <%= render 'templates/list' %>
+<div id="content">
+  <%= render 'templates/genrelist' %>
 </div>
 <%= render 'templates/audioplayer' %>

@@ -1,4 +1,8 @@
 Rails.application.routes.draw do
+  get 'favorites/new'
+
+  get 'favorites/destroy'
+
   get 'genre/index'
 
   get 'genre/show'

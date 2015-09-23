@@ -18,6 +18,31 @@
 #
 # To learn more, please read the Rails Internationalization guide
 # available at http://guides.rubyonrails.org/i18n.html.
-
+#
 en:
-  hello: "Hello world"
+  layouts:
+    musicstreamTitle: "Musicstreaming"
+  session:
+     title: "Login"
+     username: "Username"
+     password: "Password"
+     loginButton: "Login"
+     registration: "not registered yet!"
+  users:
+     registration: "Do you want an account? Click here!" #Doch einen Account? Hier gehts zum Login!
+  templates:
+    browse: "Browse"
+    myMusic: "my Music"
+    settings: "Settings"
+    logoutButton: "Logout"
+    uploadMusicHeading: "Upload Music"
+    interpret: "Interpreter"
+    title: "Title"
+    genre: "Select a genre"
+    upload: "Upload"
+    password: "Password"
+    passwordAgain: "Repeat password"
+    changeUser: "Change username"
+    changeEmail: "Change email"
+    changePassword: "Change password"
+    saveChanges: "Save changes"

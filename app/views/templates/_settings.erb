@@ -1,19 +1,19 @@
 #encoding: utf-8
 <div class="wrapper">
   <div class="settings">
-    <h1>Einstellungen</h1>
+    <h1> <%= t('templates.settings')%></h1>
     <%= form_for @user do |f| %>
         <div class="form">
-          <h2>Benutzernamen ändern: </h2>
+          <h2><%= t('templates.changeUser')%> </h2>
           <%= f.text_field :username, :placeholder => :username  %>
-          <h2>email ändern: </h2>
+          <h2><%= t('templates.changeEmail') %></h2>
           <%= f.text_field :email, :placeholder => :email  %>
-          <h2>Passwort ändern: </h2>
-          <%= f.password_field :password, :placeholder => 'passwort' %>
-          <%= f.password_field :password_confirmation, :placeholder => 'passwort bestätigen' %>
+          <h2><%= t('templates.changePassword') %></h2>
+          <%= f.password_field :password, :placeholder => t('templates.password') %>
+          <%= f.password_field :password_confirmation, :placeholder => t('templates.passwordAgain') %>
         </div>
         <div class="submit">
-          <button name="commit" type="submit"><span>Änderungen Speichern</span></button>
+          <button name="commit" type="submit"><span><%= t('templates.saveChanges') %></span></button>
         </div>
     <% end %>
   </div>

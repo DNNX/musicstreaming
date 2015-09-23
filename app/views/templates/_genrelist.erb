@@ -1,0 +1,25 @@
+# encoding: utf-8
+
+<div class="wrapper">
+  <% @music.each do |music| %>
+      <div class="music">
+        <figure>
+          <img src="/assets/images/placeholder.jpg" alt="placeholder"/>
+        </figure>
+        <div class="music-overlay icon-play">
+          <div id="favorites_<%= music.id %>" class="favorite">
+            <% if music.ifFavorite %>
+                <%= link_to '', favorites_destroy_path(:music_id => music.id), {:class => 'icon-heart active', :remote => true} %>
+            <% else %>
+                <%= link_to '', favorites_destroy_path(:music_id => music.id), {:class => 'icon-heart', :remote => true} %>
+            <% end %>
+          </div>
+        </div>
+        <div class="title">
+          <h4><%= music.interpret %></h4>
+          <h5><%= music.title %></h5>
+        </div>
+      </div>
+  <% end %>
+</div>
+
