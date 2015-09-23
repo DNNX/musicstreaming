@@ -4,6 +4,7 @@
   <%= link_to_unless_current "Deutsch" , locale: "de" %>
 </div>
 
+<% content_for :body_class, 'grey' %>
 <div class="login-register login">
   <% if flash[:alert] %>
   <p id="notice"><%= flash[:alert] %></p>

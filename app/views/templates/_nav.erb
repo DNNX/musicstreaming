@@ -1,0 +1,23 @@
+  <nav id="nav">
+    <header id="header">
+      <%= image_tag('/assets/images/logo.png', alt: 'logo') %>
+      <h2>Musicstreaming</h2>
+      <div class="mobile-close">
+        <i class="icon-cross"></i>
+      </div>
+    </header>
+    <ul>
+      <li><%= link_to 'Upload', upload_path %></li>
+      <li><%= link_to 'Browse', browse_path %></li>
+      <li><%= link_to 'Meine Musik', landing_path %></li>
+    </ul>
+    <div class="search">
+      <input type="text" id="search" placeholder="Suche"/>
+    </div>
+    <div class="logout">
+      <li><%= link_to content_tag(:span, 'Ausloggen'), sessions_destroy_path, { :class=>'button' }%></li>
+    </div>
+    <div class="mobile-open">
+      <i class="icon-menu"></i>
+    </div>
+  </nav>
